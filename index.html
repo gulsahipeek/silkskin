@@ -1,0 +1,1023 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SilkSkin by Ipek | Profesyonel Cilt Bakım Dünyası</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        /* TEMEL AYARLAR */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #FAF6F0; 
+            color: #4A4A4A;
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+            padding-top: 80px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        h2.section-title {
+            font-family: 'Playfair Display', serif;
+            text-align: center;
+            font-size: 34px;
+            color: #3A322D;
+            margin-bottom: 60px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        /* NAVBAR */
+        .navbar {
+            background-color: #FAF6F0;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            border-bottom: 1px solid #DFD7CD;
+        }
+
+        .navbar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+
+        .logo {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .logo-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            font-weight: bold;
+            letter-spacing: 3px;
+            color: #8C7A6B;
+        }
+
+        .logo-subtext {
+            font-size: 10px;
+            letter-spacing: 1px;
+            color: #8C7A6B;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-size: 12px;
+            font-weight: 500;
+            letter-spacing: 1px;
+            color: #4A4A4A;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover { color: #8C7A6B; }
+
+        .btn-analiz {
+            background-color: #8C7A6B;
+            color: white !important;
+            padding: 8px 18px;
+            border-radius: 50px;
+            font-size: 11px !important;
+            font-weight: 600;
+        }
+
+        /* 1. ANASAYFA / HERO GİRİŞ ALANI */
+        .hero {
+            height: calc(80vh);
+            background-size: 80%;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #FAF6F0;
+        }
+
+        .hero-content {
+            background-color: #E6DDD2; 
+            padding: 50px;
+            text-align: center;
+            border: 2px solid #8C7A6B; 
+            max-width: 800px;
+            box-shadow: 0 10px 25px rgba(140, 122, 107, 0.1);
+            backdrop-filter: blur(5px);
+        }
+
+        .hero-subtitle-top {
+            font-size: 13px;
+            letter-spacing: 4px;
+            color: #8C7A6B;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+
+        .hero-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 42px;
+            font-weight: bold;
+            color: #2D2521;
+            margin-bottom: 20px;
+            line-height: 1.3;
+            letter-spacing: 1px;
+        }
+
+        .hero-line {
+            width: 120px;
+            height: 2px;
+            background-color: #8C7A6B;
+            margin: 0 auto 25px auto;
+        }
+
+        .hero-description {
+            font-size: 14px;
+            letter-spacing: 2px;
+            color: #2D2521;
+            line-height: 1.8;
+            font-weight: 500;
+        }
+
+        /* 2. KEŞFET / BİLİNÇLİ TÜKETİCİ KEŞİF ALANI */
+        .kesfet {
+            padding: 120px 0;
+            background-color: #FAF6F0;
+            border-bottom: 1px solid #DFD7CD;
+        }
+
+        .kesfet-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+        }
+
+        .aktif-icerik-card {
+            border: 2px solid #8C7A6B;
+            padding: 40px;
+            background-color: #EBE2D5; 
+            line-height: 1.8;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.02);
+        }
+
+        .aktif-icerik-card.full-width {
+            grid-column: span 2;
+            background-color: #DFD7CD; 
+        }
+
+        .aktif-icerik-card h4 {
+            font-family: 'Playfair Display', serif;
+            font-size: 22px;
+            color: #2D2521;
+            margin-bottom: 15px;
+            letter-spacing: 0.5px;
+        }
+
+        .aktif-icerik-card p {
+            font-size: 14px;
+            color: #3A322D;
+        }
+
+        /* 3. CİLT TİPLERİ SAYFASI */
+        .cilt-tipleri {
+            padding: 120px 0;
+            background-color: #FAF6F0;
+            border-bottom: 1px solid #DFD7CD;
+        }
+
+        .cilt-tipleri-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+
+        .cilt-tipi-card {
+            border: 2px solid #8C7A6B;
+            padding: 35px;
+            background-color: #EBE2D5; 
+        }
+
+        .cilt-tipi-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 20px;
+            color: #2D2521;
+            margin-bottom: 15px;
+            letter-spacing: 0.5px;
+        }
+
+        .cilt-tipi-card p {
+            font-size: 14px;
+            line-height: 1.7;
+            color: #3A322D;
+        }
+
+        /* 4. DOĞRU ÜRÜN SIRALAMASI */
+        .kesfet-devam {
+            padding: 120px 0;
+            background-color: #FAF6F0;
+            border-bottom: 1px solid #DFD7CD;
+        }
+
+        .siralama-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            text-align: center;
+        }
+
+        .siralama-step {
+            border: 2px solid #8C7A6B;
+            padding: 35px 20px;
+            background-color: #EBE2D5; 
+        }
+
+        .step-num {
+            font-family: 'Playfair Display', serif;
+            font-size: 45px;
+            color: #5C4F45; 
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .siralama-step p {
+            font-size: 14px;
+            color: #2D2521;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        /* 5. ÜRÜNLERİMİZ BÖLÜMÜ */
+        .urunler-section {
+            padding: 120px 0;
+            background-color: #FAF6F0;
+            border-bottom: 1px solid #DFD7CD;
+        }
+
+        .urunler-katalog-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+        }
+
+        .katalog-urun-item {
+            border: 2px solid #8C7A6B;
+            padding: 30px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            background: #E1D7C9; 
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+        }
+
+        .katalog-urun-item img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 2px solid #8C7A6B;
+            object-fit: cover;
+            margin-bottom: 20px;
+            background-color: #fff;
+        }
+
+        .katalog-urun-item h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 18px;
+            color: #2D2521;
+            margin-bottom: 10px;
+        }
+
+        .katalog-urun-item p {
+            font-size: 12px;
+            color: #4A413C;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            padding: 0 10px;
+        }
+
+        .status-tag {
+            font-size: 11px;
+            font-weight: 700;
+            color: #5C4F45;
+            letter-spacing: 1.5px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            background-color: rgba(255,255,255,0.4);
+            padding: 3px 10px;
+            border-radius: 2px;
+        }
+
+        .btn-katalog-sepete-ekle {
+            background-color: #8C7A6B;
+            color: white;
+            border: none;
+            font-size: 11px;
+            padding: 12px 24px;
+            cursor: pointer;
+            text-transform: uppercase;
+            font-weight: bold;
+            letter-spacing: 1px;
+            width: 100%;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .btn-katalog-sepete-ekle:hover {
+            background-color: #5C524A;
+            transform: translateY(-1px);
+        }
+
+        /* 6. CİLT ANALİZİ BÖLÜMÜ */
+        .analiz-section {
+            padding: 120px 0;
+            background-color: #FAF6F0;
+            border-bottom: 1px solid #DFD7CD;
+        }
+
+        .analiz-genis-kart {
+            max-width: 750px;
+            margin: 0 auto;
+            border: 2px solid #8C7A6B;
+            padding: 50px 40px;
+            background-color: #E1D7C9; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+        }
+
+        .form-question { 
+            font-size: 13px; 
+            font-weight: bold; 
+            margin-bottom: 15px; 
+            color: #2D2521; 
+            letter-spacing: 0.5px;
+        }
+        
+        .radio-group, .checkbox-group {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin-bottom: 30px;
+            font-size: 12px;
+        }
+
+        .radio-group label, .checkbox-group label {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            cursor: pointer;
+            background-color: rgba(255,255,255,0.3); 
+            padding: 8px 12px;
+            border: 1px solid rgba(140, 122, 107, 0.3);
+        }
+
+        .radio-group input, .checkbox-group input {
+            accent-color: #8C7A6B;
+        }
+
+        .btn-full {
+            background-color: #8C7A6B;
+            color: white;
+            padding: 14px;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 12px;
+            width: 100%;
+            letter-spacing: 1px;
+            transition: background-color 0.3s;
+        }
+        .btn-full:hover { background-color: #5C524A; }
+
+        /* Rutin Sonuç Çıktısı */
+        .routine-result {
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 2px solid #8C7A6B;
+        }
+
+        .routine-result h4 { 
+            font-family: 'Playfair Display', serif;
+            font-size: 18px; 
+            text-align: center; 
+            color: #4A3E3D; 
+            margin-bottom: 25px; 
+            font-weight: bold; 
+            letter-spacing: 1px;
+        }
+        
+        .routine-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+            font-size: 12px;
+        }
+
+        .routine-day, .routine-night { 
+            border: 2px solid #8C7A6B; 
+            padding: 25px; 
+            background: #CCBFA4; 
+            line-height: 1.8;
+            box-shadow: inset 0 0 10px rgba(0,0,0,0.05);
+        }
+        
+        .routine-grid h5 { 
+            font-family: 'Playfair Display', serif;
+            font-size: 16px;
+            font-weight: bold; 
+            color: #2D2521; 
+            margin-bottom: 15px; 
+            border-bottom: 1px solid #8C7A6B;
+            padding-bottom: 8px; 
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .routine-grid ul { list-style: none; }
+        .routine-grid ul li { 
+            margin-bottom: 12px; 
+            position: relative;
+            padding-left: 20px;
+            color: #221D1A;
+        }
+        
+        .routine-grid ul li::before {
+            content: "•";
+            color: #5C4F45;
+            font-weight: bold;
+            font-size: 16px;
+            position: absolute;
+            left: 0;
+            top: -2px;
+        }
+        
+        .spf-warning {
+            grid-column: span 2;
+            background-color: #D6C3A1; 
+            border: 2px solid #8C7A6B;
+            padding: 15px 20px;
+            font-size: 12px;
+            font-weight: 500;
+            color: #4A3319;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .hidden { display: none; }
+
+        /* 7. HAKKIMIZDA & İLETİŞİM BÖLÜMÜ */
+        .hakkimizda-section {
+            padding: 120px 0;
+            background-color: #FAF6F0;
+            border-bottom: 1px solid #DFD7CD;
+        }
+
+        .hakkimizda-genis-content {
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto 60px auto;
+            font-size: 16px;
+            line-height: 1.9;
+            color: #4A4A4A;
+        }
+
+        .iletisim-form-container {
+            max-width: 600px;
+            margin: 0 auto;
+            border: 2px solid #8C7A6B;
+            padding: 40px;
+            background-color: #E1D7C9; 
+        }
+
+        .iletisim-form-container h3 {
+            font-family: 'Playfair Display', serif;
+            text-align: center;
+            margin-bottom: 30px;
+            color: #2D2521;
+        }
+
+        .iletisim-form-container form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .iletisim-form-container input, .iletisim-form-container textarea {
+            padding: 12px;
+            border: 1px solid #8C7A6B;
+            background-color: rgba(255,255,255,0.6); 
+            font-size: 13px;
+            color: #000;
+            width: 100%;
+        }
+
+        /* 8. SİZLERİN YORUMLARI */
+        .yorumlar {
+            padding: 120px 0;
+            background-color: #FAF6F0;
+            border-bottom: 1px solid #DFD7CD;
+        }
+
+        .comments-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+        }
+
+        .comment-card {
+            border: 2px solid #8C7A6B;
+            padding: 35px;
+            background-color: #EBE2D5; 
+            line-height: 1.7;
+        }
+
+        .comment-card p {
+            font-size: 14px;
+            font-style: italic;
+            color: #3A322D;
+            margin-bottom: 15px;
+        }
+
+        .comment-author {
+            font-size: 12px;
+            font-weight: bold;
+            color: #2D2521;
+            display: block;
+            text-align: right;
+        }
+
+        /* POPUP MODAL PENCERESİ */
+        .modal-overlay {
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-color: rgba(45, 37, 33, 0.5);
+            backdrop-filter: blur(4px); 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2000;
+            opacity: 0; pointer-events: none;
+            transition: opacity 0.4s ease;
+        }
+        .modal-overlay.active { opacity: 1; pointer-events: auto; }
+        
+        .modal-box {
+            background-color: #FAF6F0;
+            border: 2px solid #8C7A6B;
+            padding: 50px 40px;
+            max-width: 500px;
+            width: 92%;
+            text-align: center;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+            position: relative;
+        }
+        
+        .modal-close-btn {
+            position: absolute;
+            top: 20px;
+            right: 25px;
+            font-size: 28px;
+            background: none;
+            border: none;
+            color: #8C7A6B;
+            cursor: pointer;
+            line-height: 1;
+            transition: color 0.2s, transform 0.2s;
+        }
+        .modal-close-btn:hover { 
+            color: #2D2521; 
+            transform: scale(1.1);
+        }
+
+        .modal-box h4 { 
+            font-family: 'Playfair Display', serif; 
+            font-size: 24px; 
+            margin-bottom: 20px; 
+            color: #2D2521;
+            letter-spacing: 1px;
+        }
+        .modal-box p { 
+            font-size: 14px; 
+            color: #4A413C; 
+            line-height: 1.7; 
+            margin-bottom: 30px;
+        }
+        
+        .btn-modal-action {
+            background-color: #8C7A6B;
+            color: white;
+            padding: 14px 35px;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 11px;
+            letter-spacing: 2px;
+            transition: background-color 0.3s;
+        }
+        .btn-modal-action:hover { background-color: #5C524A; }
+
+        /* FOOTER */
+        .footer {
+            padding: 60px 0;
+            text-align: center;
+            background-color: #FAF6F0;
+            border-top: 1px solid #DFD7CD;
+        }
+
+        .footer .logo { margin-bottom: 20px; }
+        .footer p { font-size: 11px; color: #4A4A4A; margin-bottom: 15px; letter-spacing: 0.5px; }
+        .social-links a { font-size: 22px; color: #8C7A6B; }
+        .copyright { font-size: 10px !important; color: #b0a59a !important; margin-top: 20px; }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <span class="logo-text">SILKSKIN</span>
+                <span class="logo-subtext">by Ipek</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#anasayfa">ANASAYFA</a></li>
+                <li><a href="#kesfet">KEŞFET</a></li>
+                <li><a href="#cilt-tipleri">CİLT TİPLERİ</a></li>
+                <li><a href="#urunlerimiz">ÜRÜNLERİMİZ</a></li>
+                <li><a href="#analiz">CİLT ANALİZİ</a></li>
+                <li><a href="#hakkimizda">İLETİŞİM</a></li>
+                <li><a href="#analiz" class="btn-analiz">ANALİZE BAŞLA</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="anasayfa" class="hero" style="background-image: url('./assets/css/hero.jpg');">
+        <div class="container">
+            <div class="hero-content">
+                <p class="hero-subtitle-top">Cildinizin İpek Dokunuşu İle Tanışın</p>
+                <p class="hero-title">SILKSKIN BY IPEK</p>
+                <div class="hero-line"></div>
+                <p class="hero-description">PROFESYONEL CİLT BAKIM VE ANALİZ DÜNYASINA HOŞGELDİNİZ</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="kesfet" class="kesfet">
+        <div class="container">
+            <h2 class="section-title">BİLİNÇLİ TÜKETİCİ KEŞİF ALANI</h2>
+            <div class="kesfet-grid">
+                <div class="aktif-icerik-card">
+                    <h4>Aktif İçerik Kombinasyonları ve Kurallar</h4>
+                    <p>Cilt sağlığında aktif içeriklerin sinerjisi çok önemlidir. Arbutin ve Azelaik Asit gibi içerikler lekelerle savaşta birlikte harika çalışırken; Retinol gibi agresif hücre yenileyiciler akşam rutininde tek başına kalmalıdır. Hyaluronik asit nem çekici bağları sayesinde her rutinin altında güvenle baz oluşturabilir.</p>
+                </div>
+                <div class="aktif-icerik-card">
+                    <h4>Güneş Koruması (SPF) Neden Zorunludur?</h4>
+                    <p>Özellikle BHA (Salisilik Asit), Retinol ya da Leke serumları kullanıldığında cilt üst tabakası yenilenme sürecine girer ve UV ışınlarına karşı oldukça hassaslaşır. Eğer sabah rutinlerinizde en az 50 faktör geniş spektrumlu koruyucu bir güneş kremi kullanmazsanız, lekelerin ve sivilcelerin artış göstermesi kaçınılmazdır.</p>
+                </div>
+                <div class="aktif-icerik-card full-width">
+                    <h4>İçten Dışa Işıltı: Beslenme, Su Tüketimi ve Genel Sağlık Bağlantısı</h4>
+                    <p>Cildimiz, vücudumuzun iç sağlığını harfiyen yansıtan en büyük organdır. Sadece dışarıdan uyguladığımız lüks serumlar ve kremler tek başına tam bir mucize yaratamaz. Örneğin, yüksek rafine şeker tüketimi kolajen bağlarına zarar vererek cildin erken sarkmasına neden olur. Yüksek glisemik indeksli gıdalar ise insülin seviyesini aniden zıplatıp sebum üretimini artırarak sivilce ve akne döngülerini tetikler. Hücrelerin nemi tam hapsetmesi ve toksinleri dışarı atabilmesi için günde en az 2 litre su tüketimi kritik bir öneme sahiptir. Düzenli beslenme ve uyku, uyguladığınız SilkSkin aktif içeriklerinin başarısını doğrudan destekler.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="cilt-tipleri" class="cilt-tipleri">
+        <div class="container">
+            <h2 class="section-title">CİLT TİPLERİ VE ÖZELLİKLERİ</h2>
+            <div class="cilt-tipleri-grid">
+                <div class="cilt-tipi-card">
+                    <h3>KURU CİLT</h3>
+                    <p>Mat ve soluktur, kuruluk hissi yoğundur. Nem oranı düşüktür. Yoğun nemlendirme gerektirir.</p>
+                </div>
+                <div class="cilt-tipi-card">
+                    <h3>YAĞLI CİLT</h3>
+                    <p>Cilt parlaktır, sebum üretimi fazladır. Gözenekler açıktır, sivilce ve siyah nokta oluşumuna müsaittir.</p>
+                </div>
+                <div class="cilt-tipi-card">
+                    <h3>KARMA CİLT</h3>
+                    <p>Alın, burun ve çene (T bölgesi) yağlı; yanaklar ve çevresi kurudur.</p>
+                </div>
+                <div class="cilt-tipi-card">
+                    <h3>NORMAL CİLT</h3>
+                    <p>Nem ve yağ dengesi yerindedir. Gözenekler sıkıdır, sivilce ve siyah nokta oluşumu azdır.</p>
+                </div>
+                <div class="cilt-tipi-card">
+                    <h3>HASSAS CİLT</h3>
+                    <p>Cilt çok çabuk kızarır ve irite olur. Alerjik reaksiyonlara müsaittir.</p>
+                </div>
+                <div class="cilt-tipi-card">
+                    <h3>MAT/SOLUK CİLT</h3>
+                    <p>Cilt yorgun ve ışıltısızdır. Nem kaybı ve elastikiyet kaybı görülebilir.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="kesfet-devam">
+        <div class="container">
+            <h2 class="section-title">DOĞRU ÜRÜN SIRALAMASI</h2>
+            <div class="siralama-grid">
+                <div class="siralama-step">
+                    <span class="step-num">1</span>
+                    <p>CİLT TEMİZLİĞİ</p>
+                </div>
+                <div class="siralama-step">
+                    <span class="step-num">2</span>
+                    <p>TONİK UYGULAMASI</p>
+                </div>
+                <div class="siralama-step">
+                    <span class="step-num">3</span>
+                    <p>SERUM KULLANIMI</p>
+                </div>
+                <div class="siralama-step">
+                    <span class="step-num">4</span>
+                    <p>NEMLENDİRME</p>
+                </div>
+                <div class="siralama-step">
+                    <span class="step-num">5</span>
+                    <p>GÜNEŞ KORUYUCU (Gündüz)</p>
+                </div>
+                <div class="siralama-step">
+                    <span class="step-num">6</span>
+                    <p>GECE BAKIMI</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="urunlerimiz" class="urunler-section">
+        <div class="container">
+            <h2 class="section-title">ÜRÜNLERİMİZ</h2>
+            <div class="urunler-katalog-grid">
+                <div class="katalog-urun-item">
+                    <img src="assets/css/urun1.jpg" alt="Hyaluronik Asit">
+                    <h3>HYALURONİK ASİT SERUM</h3>
+                    <p>Cildin alt katmanlarına kadar yoğun nem takviyesi sunarak dolgun ve ipeksi bir görünüm kazandırır.</p>
+                    <span class="status-tag">YAKINDA SATIŞTA</span>
+                    <button onclick="triggerCartRedirect()" class="btn-katalog-sepete-ekle">Sepete Ekle</button>
+                </div>
+                <div class="katalog-urun-item">
+                    <img src="assets/css/urun2.jpg" alt="Azelaik Asit">
+                    <h3>AZELAİK ASİT SERUM</h3>
+                    <p>Cilt bariyerini hassasiyet yaratmadan sakinleştirir, akne ve kızarıklık görünümlerini harfiyen yatıştırır.</p>
+                    <span class="status-tag">YAKINDA SATIŞTA</span>
+                    <button onclick="triggerCartRedirect()" class="btn-katalog-sepete-ekle">Sepete Ekle</button>
+                </div>
+                <div class="katalog-urun-item">
+                    <img src="assets/css/urun3.jpg" alt="Leke Karşıtı Serum">
+                    <h3>LEKE KARŞITI SERUM</h3>
+                    <p>Saf Arbutin formülasyonu ile ton eşitsizliklerini giderir, cilde kalıcı bir parlaklık ve berraklık kazandırır.</p>
+                    <span class="status-tag">YAKINDA SATIŞTA</span>
+                    <button onclick="triggerCartRedirect()" class="btn-katalog-sepete-ekle">Sepete Ekle</button>
+                </div>
+                <div class="katalog-urun-item">
+                    <img src="assets/css/urun4.jpg" alt="AHA/BHA Tonik">
+                    <h3>AHA/BHA TONİK</h3>
+                    <p>Gözenekleri derinlemesine arındırarak siyah nokta oluşumunu engeller ve pürüzsüz bir üst doku sunar.</p>
+                    <span class="status-tag">YAKINDA SATIŞTA</span>
+                    <button onclick="triggerCartRedirect()" class="btn-katalog-sepete-ekle">Sepete Ekle</button>
+                </div>
+                <div class="katalog-urun-item">
+                    <img src="assets/css/urun5.jpg" alt="Niacinamide Serum">
+                    <h3>NİACİNAMİDE SERUM</h3>
+                    <p>Gözenek sıkılaştırıcı ve sebum dengeleyici etkisiyle pürüzsüz bir cilt yapısı inşa eder.</p>
+                    <span class="status-tag">YAKINDA SATIŞTA</span>
+                    <button onclick="triggerCartRedirect()" class="btn-katalog-sepete-ekle">Sepete Ekle</button>
+                </div>
+                <div class="katalog-urun-item">
+                    <img src="assets/css/urun6.jpg" alt="Nemlendirici Krem">
+                    <h3>NEMLENDİRİCİ KREM</h3>
+                    <p>Yoğun seramid desteği ile cildin nemini gün boyu hapseder ve koruyucu bariyer oluşturur.</p>
+                    <span class="status-tag">YAKINDA SATIŞTA</span>
+                    <button onclick="triggerCartRedirect()" class="btn-katalog-sepete-ekle">Sepete Ekle</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="analiz" class="analiz-section">
+        <div class="container">
+            <h2 class="section-title">CİLT ANALİZİ YAP</h2>
+            <div class="analiz-genis-kart">
+                <form id="skinAnalysisForm" onsubmit="generateRoutine(event)">
+                    <p class="form-question">1. Cilt Tipinizi Seçin:</p>
+                    <div class="radio-group">
+                        <label><input type="radio" name="skinType" value="Kuru" required> Kuru</label>
+                        <label><input type="radio" name="skinType" value="Yağlı"> Yağlı</label>
+                        <label><input type="radio" name="skinType" value="Karma"> Karma</label>
+                        <label><input type="radio" name="skinType" value="Normal"> Normal</label>
+                    </div>
+                    
+                    <p class="form-question">2. Cilt Sorunlarınız :</p>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" value="sivilce"> Sivilce</label>
+                        <label><input type="checkbox" value="leke"> Leke</label>
+                        <label><input type="checkbox" value="kirisiklik"> Kırışıklık</label>
+                        <label><input type="checkbox" value="matlik"> Matlık</label>
+                        <label><input type="checkbox" value="gözenek"> Gözenek</label>
+                        <label><input type="checkbox" value="siyah_nokta"> Siyah Nokta</label>
+                    </div>
+                    <button type="submit" class="btn-full">Analiz Sonucunu Al</button>
+                </form>
+                
+                <div id="routineResult" class="routine-result hidden">
+                    <h4>SİZE ÖZEL RUTİN ÖNERİSİ</h4>
+                    <div class="routine-grid">
+                        <div class="routine-day">
+                            <h5><i class="fa-regular fa-sun" style="color: #5C4F45;"></i> SABAH BAKIMI</h5>
+                            <ul id="morningList"></ul>
+                        </div>
+                        <div class="routine-night">
+                            <h5><i class="fa-regular fa-moon" style="color: #3A322D;"></i> AKŞAM BAKIMI</h5>
+                            <ul id="eveningList"></ul>
+                        </div>
+                        <div class="spf-warning">
+                            <i class="fa-solid fa-circle-exclamation text-lg"></i>
+                            <span><strong>Kritik Hatırlatma:</strong> Rutininizde aktif asit ve leke karşıtı bileşenler bulunduğu için sabahları en az <strong>SPF 50 geniş spektrumlu güneş kremi</strong> kullanmanız harfiyen zorunludur.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="hakkimizda" class="hakkimizda-section">
+        <div class="container">
+            <h2 class="section-title">HAKKIMIZDA</h2>
+            <div class="hakkimizda-genis-content">
+                <p>SILKSKIN markası, cildinizin sağlıklı ve pürüzsüz görünmesini desteklemek amacıyla doğal ve etkili içeriklerle formüle edilmiştir. Cilt bakımı konusunda bilinçlenmenizi ve cildinize en iyi bakımı sunmanızı hedefliyoruz. Bize ulaşın, sorularınızı yanıtlayalım.</p>
+            </div>
+            
+            <div class="iletisim-form-container">
+                <h3>BİZE ULAŞIN</h3>
+                <form id="contactForm">
+                    <input type="text" id="formName" placeholder="Adınız Soyadınız" required>
+                    <input type="email" id="formEmail" placeholder="E-posta Adresiniz" required>
+                    <textarea id="formMessage" placeholder="Mesajınız / Yorumunuz" rows="5" required></textarea>
+                    <button type="submit" class="btn-full">Mesajı Gönder</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section id="yorumlar" class="yorumlar">
+        <div class="container">
+            <h2 class="section-title text-black">SİZLERİN YORUMLARI</h2>
+            <div id="commentsWrapper" class="comments-grid">
+            
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+           <div class="logo">
+    <img src="./assets/css/logo.png" alt="SilkSkin Logo" style="height: 65px; width: auto; object-fit: contain;">
+</div>
+            <p>DOĞAL VE ETKİLİ CİLT BAKIMI</p>
+            <div class="social-links">
+                <a href="https://instagram.com/silkskinbyipek" target="_blank">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+            </div>
+            <p class="copyright">&copy; 2026 SilkSkin by Ipek. Tüm Hakları Saklıdır.</p>
+        </div>
+    </footer>
+
+    <div id="cartModal" class="modal-overlay">
+        <div class="modal-box">
+            <button onclick="closeModalOnly()" class="modal-close-btn">&times;</button>
+            <h4>İpeksi Bir Gelecek ✨</h4>
+            <p>SilkSkin by Ipek serimiz şu an harfiyen laboratuvar hazırlık aşamasındadır ve çok yakında resmi olarak satışa sunulacaktır. Ön satış, çekilişler ve profesyonel içerikler için sizi kurumsal topluluğumuza davet ediyoruz.</p>
+            <button onclick="closeModalAndRedirect()" class="btn-modal-action">Hesabı Takip Et</button>
+        </div>
+    </div>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const API_URL = 'http://localhost:3000/api/comments';
+
+    // SQL'DEN YORUMLARI ÇEKME
+    function loadComments() {
+        fetch(API_URL)
+            .then(res => res.json())
+            .then(data => {
+                const commentsWrapper = document.getElementById('commentsWrapper');
+                if(commentsWrapper) {
+                    commentsWrapper.innerHTML = '';
+                    data.forEach(comment => {
+                        const commentHTML = `
+                            <div class="comment-card">
+                                <p>"${comment.message}"</p>
+                                <span class="comment-author">- ${comment.name}</span>
+                            </div>
+                        `;
+                        commentsWrapper.insertAdjacentHTML('beforeend', commentHTML);
+                    });
+                }
+            })
+            .catch(err => console.error('SQL Çekme Hatası:', err));
+    }
+
+    loadComments();
+
+    // FORMU SQL'E KAYDETME
+    const contactForm = document.getElementById('contactForm');
+    if(contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('formName').value;
+            const email = document.getElementById('formEmail').value;
+            const message = document.getElementById('formMessage').value;
+            
+            fetch(API_URL, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ name, email, message })
+            })
+            .then(res => res.json())
+            .then(resData => {
+                if(resData.status === 'success') {
+                    alert('Değerli yorumunuz için çok teşekkür ederiz. Geri bildiriminiz bizim için çok kıymetlidir ve harfiyen dikkate alınacaktır. ✨');
+                    contactForm.reset();
+                    loadComments();
+                    document.getElementById('yorumlar').scrollIntoView({ behavior: 'smooth' });
+                }
+            })
+            .catch(err => alert('SQL Kayıt Hatası: ' + err));
+        });
+    }
+
+    // CİLT ANALİZİ
+    const skinAnalysisForm = document.getElementById('skinAnalysisForm');
+    if(skinAnalysisForm) {
+        skinAnalysisForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const skinType = document.querySelector('input[name="skinType"]:checked').value;
+            const checkboxes = document.querySelectorAll('#skinAnalysisForm input[type="checkbox"]:checked');
+            let problems = [];
+            checkboxes.forEach(cb => problems.push(cb.value));
+
+            const morningList = document.getElementById('morningList');
+            const eveningList = document.getElementById('eveningList');
+
+            morningList.innerHTML = '<li>Cildi su bazlı Hydrating Cleanser ile yıkayın.</li>';
+            eveningList.innerHTML = '<li>Günün sebumunu Hydrating Cleanser ile arındırın.</li>';
+
+            if (problems.includes('sivilce')) morningList.innerHTML += '<li>Azelaik Asit Serum uygulayın.</li>';
+            if (problems.includes('leke')) morningList.innerHTML += '<li>Arbutin Serum uygulayın.</li>';
+            if (problems.includes('gözenek')) eveningList.innerHTML += '<li>AHA/BHA Tonik uygulayın (Haftada 3 gece).</li>';
+            if (problems.includes('kirisiklik') || skinType === 'Kuru') morningList.innerHTML += '<li>Hyaluronik Asit Serum uygulayın.</li>';
+
+            morningList.innerHTML += '<li>Hafif yapılı nemlendirici ile bariyeri mühürleyin.</li>';
+            eveningList.innerHTML += '<li>SilkSkin Ceramide Barrier Cream ile nem kalkanını onarın.</li>';
+
+            document.getElementById('routineResult').classList.remove('hidden');
+            document.getElementById('routineResult').scrollIntoView({ behavior: 'smooth' });
+        });
+    }
+});
+
+// MODAL SEPET UYARISI FUNKSİYONLARI
+function triggerCartRedirect() {
+    document.getElementById('cartModal').classList.add('active');
+}
+function closeModalOnly() {
+    document.getElementById('cartModal').classList.remove('active');
+}
+function closeModalAndRedirect() {
+    closeModalOnly();
+    window.open('https://instagram.com/silkskinbyipek', '_blank');
+}
+</script>
